@@ -1,0 +1,15 @@
+{
+  "name": "viewport-forge-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/worker.mjs",
+    "dev": "node --watch src/worker.mjs",
+    "install:browsers": "playwright install chromium"
+  },
+  "dependencies": {
+    "ioredis": "^5.8.1",
+    "playwright": "^1.52.0"
+  }
+}

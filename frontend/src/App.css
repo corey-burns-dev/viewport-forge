@@ -1,0 +1,170 @@
+:root {
+  --ink: #101b2c;
+  --sky: #f3f8ff;
+  --brand: #1248ff;
+  --brand-soft: #e6edff;
+  --danger: #b42318;
+  --ok: #027a48;
+}
+
+.page-shell {
+  min-height: 100dvh;
+  color: var(--ink);
+  padding: 3rem 1.25rem 4rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hero-card {
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: linear-gradient(135deg, #ffffff 5%, #ebf3ff 55%, #dce9ff 100%);
+  box-shadow: 0 20px 50px rgba(10, 36, 99, 0.16);
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #274690;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 66ch;
+  color: #274690;
+}
+
+.capture-form {
+  margin-top: 1.5rem;
+}
+
+.capture-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.form-row input {
+  flex: 1;
+  border: 1px solid #b5c9ee;
+  border-radius: 14px;
+  padding: 0.8rem 0.9rem;
+  background: #ffffff;
+  font: inherit;
+}
+
+.form-row button {
+  border: 0;
+  border-radius: 14px;
+  padding: 0.8rem 1.1rem;
+  min-width: 140px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(120deg, #1248ff, #2f66ff);
+  cursor: pointer;
+}
+
+.form-row button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.status-strip {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  background: #eef2ff;
+  font-weight: 600;
+}
+
+.pill-processing,
+.pill-queued {
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.pill-completed {
+  background: #dcfae6;
+  color: var(--ok);
+}
+
+.pill-failed {
+  background: #fee4e2;
+  color: var(--danger);
+}
+
+.error-text {
+  color: var(--danger);
+  margin-bottom: 0;
+}
+
+.viewport-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+.viewport-card {
+  border-radius: 16px;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #d4e2ff;
+}
+
+.viewport-card h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.viewport-card p {
+  margin: 0.35rem 0 0;
+  color: #355ca8;
+}
+
+.roadmap-strip {
+  margin-top: 1.5rem;
+  border-radius: 18px;
+  background: #101b2c;
+  color: #eff4ff;
+  padding: 1rem 1.1rem;
+}
+
+.roadmap-strip h3,
+.roadmap-strip p {
+  margin: 0;
+}
+
+.roadmap-strip p {
+  margin-top: 0.4rem;
+  color: #c8d7ff;
+}
+
+@media (max-width: 700px) {
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row button {
+    width: 100%;
+  }
+}
